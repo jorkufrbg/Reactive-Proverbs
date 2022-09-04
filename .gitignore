@@ -127,4 +127,4 @@ dist
 .pnp.*
 build/
 /build/
-build/asset-manifest.json
+build/*

@@ -3,3 +3,9 @@
   width: 90%;
   max-width: 40rem;
 }
+
+.main h2 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}

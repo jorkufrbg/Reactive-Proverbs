@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import QuoteForm from "../components/quotes/QuoteForm";
@@ -20,7 +20,13 @@ const NewQuote = () => {
   };
 
   return (
-    <QuoteForm isLoading={status === "pending"} onAddQuote={addQuoteHandler} />
+    <Fragment>
+      <h2 className="center">Share some folk wisdom!</h2>
+      <QuoteForm
+        isLoading={status === "pending"}
+        onAddQuote={addQuoteHandler}
+      />
+    </Fragment>
   );
 };
 

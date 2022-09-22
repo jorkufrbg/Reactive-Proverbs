@@ -1,7 +1,13 @@
+type Quote = {
+  id: string;
+  text: string;
+  author: string;
+};
+
 const FIREBASE_DOMAIN =
   "https://quotes-app-a62b0-default-rtdb.europe-west1.firebasedatabase.app";
 
-export async function getAllQuotes() {
+export async function getAllQuotes(): Promise<Quote[]> {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
   const data = await response.json();
 
@@ -23,7 +29,7 @@ export async function getAllQuotes() {
   return transformedQuotes;
 }
 
-export async function getSingleQuote(quoteId) {
+export async function getSingleQuote(quoteId: string) {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
   const data = await response.json();
 

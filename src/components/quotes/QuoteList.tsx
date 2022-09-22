@@ -4,8 +4,8 @@ import { useHistory, useLocation } from "react-router-dom";
 import QuoteItem from "./QuoteItem";
 import classes from "./QuoteList.module.css";
 
-const sortQuotes = (quotes, ascending) => {
-  return quotes.sort((quoteA, quoteB) => {
+const sortQuotes = (quotes: any[], ascending: boolean) => {
+  return quotes.sort((quoteA: { id: number; }, quoteB: { id: number; }) => {
     if (ascending) {
       return quoteA.id > quoteB.id ? 1 : -1;
     } else {
@@ -14,7 +14,7 @@ const sortQuotes = (quotes, ascending) => {
   });
 };
 
-const QuoteList = (props) => {
+const QuoteList = (props: { quotes: any; }) => {
   const history = useHistory();
   const location = useLocation();
 
@@ -39,7 +39,7 @@ const QuoteList = (props) => {
         </button>
       </div>
       <ul className={classes.list}>
-        {sortedQuotes.map((quote) => (
+        {sortedQuotes.map((quote: { id: any; author: any; text: any; }) => (
           <QuoteItem
             key={quote.id}
             id={quote.id}

@@ -5,8 +5,13 @@ import { addComment } from "../../lib/api";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./NewCommentForm.module.css";
 
-const NewCommentForm = (props) => {
-  const commentTextRef = useRef();
+type NewCommentFormProps = {
+  onAddedComment: () => void;
+  quoteId: string;
+}
+
+const NewCommentForm = (props: NewCommentFormProps) => {
+  const commentTextRef = useRef<HTMLTextAreaElement>(null);
   const { sendRequest, status, error } = useHttp(addComment);
   const { onAddedComment } = props;
 
@@ -16,9 +21,9 @@ const NewCommentForm = (props) => {
     }
   }, [status, error, onAddedComment]);
 
-  const submitFormHandler = (event) => {
+  const submitFormHandler = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    const enteredText = commentTextRef.current.value;
+    const enteredText = commentTextRef.current?.value;
     sendRequest({ commentData: { text: enteredText }, quoteId: props.quoteId });
   };
 
@@ -31,7 +36,7 @@ const NewCommentForm = (props) => {
       )}
       <div className={classes.control} onSubmit={submitFormHandler}>
         <label htmlFor="comment">Your Comment</label>
-        <textarea id="comment" rows="5" ref={commentTextRef}></textarea>
+        <textarea id="comment" rows={5} ref={commentTextRef}></textarea>
       </div>
       <div className={classes.actions}>
         <button className="btn">Add Comment</button>

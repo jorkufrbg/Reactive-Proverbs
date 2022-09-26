@@ -1,6 +1,8 @@
 import classes from './HighlightedQuote.module.css';
 
-const HighlightedQuote = (props) => {
+type HighlightedQuoteProps = { author: string; text: string }
+
+const HighlightedQuote = (props: HighlightedQuoteProps) => {
   return (
     <figure className={classes.quote}>
       <p>{props.text}</p>

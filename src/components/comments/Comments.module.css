@@ -6,6 +6,10 @@
   color: #ffffff;
 }
 
-.comments > button {
+.comments>button {
   font-size: 1.25rem;
+}
+
+.comments>p {
+  color: white;
 }

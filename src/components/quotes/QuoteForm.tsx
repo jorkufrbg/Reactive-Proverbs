@@ -5,13 +5,15 @@ import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./QuoteForm.module.css";
 
-const QuoteForm = (props) => {
+type QuoteFormProps = {}
+
+const QuoteForm = (props: QuoteFormProps) => {
   const [isEntering, setIsEntering] = useState(false);
 
-  const authorInputRef = useRef();
+  const authorInputRef = useRef<string | null>(null);;
   const textInputRef = useRef();
 
-  function submitFormHandler(event) {
+  function submitFormHandler(event: React.SyntheticEvent) {
     event.preventDefault();
 
     const enteredAuthor = authorInputRef.current.value;

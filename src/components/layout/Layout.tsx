@@ -3,7 +3,9 @@ import { Fragment } from "react";
 import classes from "./Layout.module.css";
 import MainNavigation from "./MainNavigation";
 
-const Layout = (props) => {
+type LayoutProps = { children?: React.ReactNode }
+
+const Layout = (props: LayoutProps) => {
   return (
     <Fragment>
       <MainNavigation />

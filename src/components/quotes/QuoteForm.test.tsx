@@ -10,7 +10,7 @@ describe("QuoteForm", () => {
 
     render(
       <MemoryRouter>
-        <QuoteForm onAddQuote={onAddQuoteMock} />
+        <QuoteForm onAddQuote={onAddQuoteMock} isLoading={undefined} />
       </MemoryRouter>
     );
 

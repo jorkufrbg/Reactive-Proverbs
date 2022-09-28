@@ -5,19 +5,22 @@ import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./QuoteForm.module.css";
 
-type QuoteFormProps = {}
+type QuoteFormProps = {
+  isLoading?: JSX.Element;
+  onAddQuote(arg0: { author: string | undefined; text: string | undefined; }): unknown;
+}
 
 const QuoteForm = (props: QuoteFormProps) => {
   const [isEntering, setIsEntering] = useState(false);
 
-  const authorInputRef = useRef<string | null>(null);;
-  const textInputRef = useRef();
+  const authorInputRef = useRef<HTMLInputElement>(null);
+  const textInputRef = useRef<HTMLTextAreaElement>(null);
 
   function submitFormHandler(event: React.SyntheticEvent) {
     event.preventDefault();
 
-    const enteredAuthor = authorInputRef.current.value;
-    const enteredText = textInputRef.current.value;
+    const enteredAuthor = authorInputRef.current?.value;
+    const enteredText = textInputRef.current?.value;
 
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   }
@@ -54,7 +57,7 @@ const QuoteForm = (props: QuoteFormProps) => {
           </div>
           <div className={classes.control}>
             <label htmlFor="text">Text</label>
-            <textarea id="text" rows="5" ref={textInputRef}></textarea>
+            <textarea id="text" rows={5} ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
             <button onClick={finishEnteringHandler} className="btn">

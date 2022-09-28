@@ -45,7 +45,7 @@ export async function getSingleQuote(quoteId: string) {
   return loadedQuote;
 }
 
-export async function addQuote(quoteData) {
+export async function addQuote(quoteData: any) {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
     method: "POST",
     body: JSON.stringify(quoteData),
@@ -62,7 +62,7 @@ export async function addQuote(quoteData) {
   return null;
 }
 
-export async function addComment(requestData) {
+export async function addComment(requestData: { quoteId: string; commentData: string; }) {
   const response = await fetch(
     `${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`,
     {
@@ -82,7 +82,7 @@ export async function addComment(requestData) {
   return { commentId: data.name };
 }
 
-export async function getAllComments(quoteId) {
+export async function getAllComments(quoteId: string) {
   const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`);
 
   const data = await response.json();

@@ -1,6 +1,6 @@
 import { useReducer, useCallback } from 'react';
 
-function httpReducer(state, action) {
+function httpReducer(state: any, action: { type: string; responseData: any; errorMessage: any; }) {
   if (action.type === 'SEND') {
     return {
       data: null,
@@ -28,7 +28,7 @@ function httpReducer(state, action) {
   return state;
 }
 
-function useHttp(requestFunction, startWithPending = false) {
+function useHttp(requestFunction: any, startWithPending = false) {
   const [httpState, dispatch] = useReducer(httpReducer, {
     status: startWithPending ? 'pending' : null,
     data: null,
@@ -36,16 +36,27 @@ function useHttp(requestFunction, startWithPending = false) {
   });
 
   const sendRequest = useCallback(
-    async function (requestData) {
-      dispatch({ type: 'SEND' });
+    async function (requestData: any) {
+      dispatch({
+        type: 'SEND',
+        responseData: undefined,
+        errorMessage: undefined
+      });
       try {
         const responseData = await requestFunction(requestData);
-        dispatch({ type: 'SUCCESS', responseData });
-      } catch (error) {
         dispatch({
-          type: 'ERROR',
-          errorMessage: error.message || 'Something went wrong!',
+          type: 'SUCCESS', responseData,
+          errorMessage: undefined
         });
+      } catch (error) {
+        if (error instanceof Error) {
+          dispatch({
+            type: 'ERROR',
+            errorMessage: error.message || 'Something went wrong!',
+            responseData: undefined
+          });
+        }
+
       }
     },
     [requestFunction]

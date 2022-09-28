@@ -45,7 +45,8 @@ describe("QuotesList Component", () => {
     const sortingButton = screen.getByRole("button");
 
     //Assert
-    expect(sortingButton).toHaveTextContent("Sort Ascending", { exact: false });
+    // expect(sortingButton).toHaveTextContent("Sort Ascending", { exact: false });
+    expect(sortingButton).toHaveTextContent("Sort Ascending");
   });
 
   test("is in Descending order", async () => {
@@ -69,9 +70,10 @@ describe("QuotesList Component", () => {
     //Assert
     await waitFor(() => {
       const sortingButtonChanged = screen.getByRole("button");
-      expect(sortingButtonChanged).toHaveTextContent("Sort Descending", {
-        exact: false,
-      });
+      // expect(sortingButtonChanged).toHaveTextContent("Sort Descending", {
+      //   exact: false,
+      // });
+      expect(sortingButtonChanged).toHaveTextContent("Sort Descending");
     });
   });
 });

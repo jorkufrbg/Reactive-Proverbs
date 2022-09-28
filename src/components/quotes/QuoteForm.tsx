@@ -6,7 +6,7 @@ import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./QuoteForm.module.css";
 
 type QuoteFormProps = {
-  isLoading?: JSX.Element;
+  isLoading?: JSX.Element | boolean;
   onAddQuote(arg0: { author: string | undefined; text: string | undefined; }): unknown;
 }
 

@@ -10,7 +10,8 @@
 
 .logo {
   font-size: 2rem;
-  color: #009688;
+  /* color: #009688; */
+  color: #FFFFFF;
 }
 
 .nav ul {
@@ -27,7 +28,8 @@
 
 .nav a {
   text-decoration: none;
-  color: #88dfdf;
+  /* color: #88dfdf; */
+  color: #FFFFFF;
 }
 
 .nav a:hover,

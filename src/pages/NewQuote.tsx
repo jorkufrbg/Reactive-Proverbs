@@ -21,7 +21,7 @@ const NewQuote = () => {
 
   return (
     <Fragment>
-      <h2 className="center">Share some folk wisdom!</h2>
+      <h2 className="center">Share some wisdom!</h2>
       <QuoteForm
         isLoading={status === "pending"}
         onAddQuote={addQuoteHandler}

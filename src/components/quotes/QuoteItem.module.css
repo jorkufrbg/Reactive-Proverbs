@@ -36,3 +36,21 @@
   font-style: italic;
   color: #566d6d;
 }
+
+@media only screen and (max-width: 450px) {
+  .item {
+    flex-direction: column;
+  }
+
+  .item figure {
+    width: 100%;
+  }
+
+  .item figure {
+    margin-bottom: 1rem;
+  }
+
+  .item blockquote {
+    margin-bottom: 0.5rem;
+  }
+}

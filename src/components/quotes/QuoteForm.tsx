@@ -7,7 +7,7 @@ import classes from "./QuoteForm.module.css";
 
 type QuoteFormProps = {
   isLoading?: JSX.Element | boolean;
-  onAddQuote(arg0: { author: string | undefined; text: string | undefined; }): unknown;
+  onAddQuote(arg0: { author: string | undefined; text: string | undefined; }): void;
 }
 
 const QuoteForm = (props: QuoteFormProps) => {

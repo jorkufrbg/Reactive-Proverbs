@@ -7,7 +7,7 @@ import classes from "./NewCommentForm.module.css";
 
 type NewCommentFormProps = {
   onAddedComment: () => void;
-  quoteId: string;
+  quoteId: string | undefined;
 }
 
 const NewCommentForm = (props: NewCommentFormProps) => {

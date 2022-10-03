@@ -1,5 +1,5 @@
 import { Fragment, useRef, useState } from "react";
-import { Prompt } from "react-router-dom";
+// import { Prompt } from "react-router-dom";
 
 import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
@@ -35,10 +35,10 @@ const QuoteForm = (props: QuoteFormProps) => {
 
   return (
     <Fragment>
-      <Prompt
+      {/* <Prompt
         when={isEntering}
         message={(location) => "Are you sure you want to leave?"}
-      />
+      /> */}
       <Card>
         <form
           onFocus={formFocusedHandler}

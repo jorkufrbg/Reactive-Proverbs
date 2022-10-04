@@ -1,43 +1,43 @@
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect } from 'react'
 // import { useParams, Route, Link, useRouteMatch } from "react-router-dom";
-import { useParams, Outlet } from "react-router-dom";
+import { useParams, Outlet } from 'react-router-dom'
 
-import HighlightedQuote from "../components/quotes/HighlightedQuote";
+import HighlightedQuote from '../components/quotes/HighlightedQuote'
 // import Comments from "../components/comments/Comments";
-import useHttp from "../hooks/use-http";
-import { getSingleQuote } from "../lib/api";
-import LoadingSpinner from "../components/UI/LoadingSpinner";
+import useHttp from '../hooks/use-http'
+import { getSingleQuote } from '../lib/api'
+import LoadingSpinner from '../components/UI/LoadingSpinner'
 
 const QuoteDetail = () => {
   // const match = useRouteMatch();
-  const params = useParams<{ quoteId: string }>();
-  const { quoteId } = params;
+  const params = useParams<{ quoteId: string }>()
+  const { quoteId } = params
 
   const {
     sendRequest,
     status,
     data: loadedQuote,
     error,
-  } = useHttp(getSingleQuote, true);
+  } = useHttp(getSingleQuote, true)
 
   useEffect(() => {
-    sendRequest(quoteId);
-  }, [sendRequest, quoteId]);
+    sendRequest(quoteId)
+  }, [sendRequest, quoteId])
 
-  if (status === "pending") {
+  if (status === 'pending') {
     return (
       <div className="centered">
         <LoadingSpinner />
       </div>
-    );
+    )
   }
 
   if (error) {
-    return <p className="centered focused">{error}</p>;
+    return <p className="centered focused">{error}</p>
   }
 
   if (!loadedQuote.text) {
-    return <p>No Quote Found!</p>;
+    return <p>No Quote Found!</p>
   }
 
   return (
@@ -57,7 +57,7 @@ const QuoteDetail = () => {
       </Route> */}
       <Outlet />
     </Fragment>
-  );
-};
+  )
+}
 
-export default QuoteDetail;
+export default QuoteDetail

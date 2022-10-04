@@ -1,37 +1,40 @@
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useRef, useState } from 'react'
 // import { Prompt } from "react-router-dom";
 
-import Card from "../UI/Card";
-import LoadingSpinner from "../UI/LoadingSpinner";
-import classes from "./QuoteForm.module.css";
+import Card from '../UI/Card'
+import LoadingSpinner from '../UI/LoadingSpinner'
+import classes from './QuoteForm.module.css'
 
-type QuoteFormProps = {
-  isLoading?: JSX.Element | boolean;
-  onAddQuote(arg0: { author: string | undefined; text: string | undefined; }): void;
+interface QuoteFormProps {
+  isLoading?: JSX.Element | boolean
+  onAddQuote: (arg0: {
+    author: string | undefined
+    text: string | undefined
+  }) => void
 }
 
 const QuoteForm = (props: QuoteFormProps) => {
-  const [isEntering, setIsEntering] = useState(false);
+  const [isEntering, setIsEntering] = useState(false)
 
-  const authorInputRef = useRef<HTMLInputElement>(null);
-  const textInputRef = useRef<HTMLTextAreaElement>(null);
+  const authorInputRef = useRef<HTMLInputElement>(null)
+  const textInputRef = useRef<HTMLTextAreaElement>(null)
 
   function submitFormHandler(event: React.SyntheticEvent) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const enteredAuthor = authorInputRef.current?.value;
-    const enteredText = textInputRef.current?.value;
+    const enteredAuthor = authorInputRef.current?.value
+    const enteredText = textInputRef.current?.value
 
-    props.onAddQuote({ author: enteredAuthor, text: enteredText });
+    props.onAddQuote({ author: enteredAuthor, text: enteredText })
   }
 
   const finishEnteringHandler = () => {
-    setIsEntering(false);
-  };
+    setIsEntering(false)
+  }
 
   const formFocusedHandler = () => {
-    setIsEntering(true);
-  };
+    setIsEntering(true)
+  }
 
   return (
     <Fragment>
@@ -67,7 +70,7 @@ const QuoteForm = (props: QuoteFormProps) => {
         </form>
       </Card>
     </Fragment>
-  );
-};
+  )
+}
 
-export default QuoteForm;
+export default QuoteForm

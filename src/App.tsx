@@ -1,16 +1,17 @@
-import React, { Suspense } from "react";
+import React, { Suspense } from 'react'
 // import { Route, Switch, Redirect } from "react-router-dom";
-import { Routes, Route, Navigate, Link } from "react-router-dom";
+import { Routes, Route, Navigate, Link } from 'react-router-dom'
 
-import LoadingSpinner from "./components/UI/LoadingSpinner";
-import Layout from "./components/layout/Layout";
+import LoadingSpinner from './components/UI/LoadingSpinner'
+import Layout from './components/layout/Layout'
 
-
-const AllQuotes = React.lazy(() => import("./pages/AllQuotes"));
-const QuoteDetail = React.lazy(() => import("./pages/QuoteDetail"));
-const NewQuote = React.lazy(() => import("./pages/NewQuote"));
-const NotFound = React.lazy(() => import("./pages/NotFound"));
-const Comments = React.lazy(() => import("./components/comments/Comments"));
+const AllQuotes = React.lazy(async () => await import('./pages/AllQuotes'))
+const QuoteDetail = React.lazy(async () => await import('./pages/QuoteDetail'))
+const NewQuote = React.lazy(async () => await import('./pages/NewQuote'))
+const NotFound = React.lazy(async () => await import('./pages/NotFound'))
+const Comments = React.lazy(
+  async () => await import('./components/comments/Comments')
+)
 
 function App() {
   return (
@@ -27,29 +28,27 @@ function App() {
 
           <Route path="/quotes" element={<AllQuotes />} />
 
-          <Route path='/quotes/:quoteId' element={<QuoteDetail />}>
-
+          <Route path="/quotes/:quoteId" element={<QuoteDetail />}>
             <Route
-              path=''
+              path=""
               element={
-                <div className='centered'>
-                  <Link className='btn--flat' to={`comments`}>
+                <div className="centered">
+                  <Link className="btn--flat" to={'comments'}>
                     Load Comments
                   </Link>
                 </div>
               }
             />
-            <Route path={`comments`} element={<Comments />} />
+            <Route path={'comments'} element={<Comments />} />
           </Route>
 
           <Route path="/new-quote" element={<NewQuote />} />
 
           <Route path="*" element={<NotFound />} />
-
         </Routes>
       </Suspense>
-    </Layout >
-  );
+    </Layout>
+  )
 }
 
-export default App;
+export default App

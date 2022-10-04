@@ -30,4 +30,5 @@
     "editor.wordBasedSuggestions": true,
     // Enable parameter hints
     "editor.parameterHints.enabled": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
 }

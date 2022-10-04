@@ -11,7 +11,7 @@ describe('QuoteForm', () => {
     render(
       <MemoryRouter>
         <QuoteForm onAddQuote={onAddQuoteMock} isLoading={undefined} />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     const authorInput = screen.getByLabelText('Author')

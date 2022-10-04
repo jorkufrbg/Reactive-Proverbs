@@ -9,7 +9,7 @@ test('NewCommentForm is rendered', () => {
         throw new Error('Function not implemented.')
       }}
       quoteId={''}
-    />
+    />,
   )
 
   const newCommentTextarea = screen.getByRole('textbox')

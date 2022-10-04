@@ -23,11 +23,8 @@ const NewQuote = () => {
 
   return (
     <Fragment>
-      <h2 className="center">Share some wisdom!</h2>
-      <QuoteForm
-        isLoading={status === 'pending'}
-        onAddQuote={addQuoteHandler}
-      />
+      <h2 className='center'>Share some wisdom!</h2>
+      <QuoteForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />
     </Fragment>
   )
 }

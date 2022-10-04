@@ -4,8 +4,7 @@ interface Quote {
   author: string
 }
 
-const FIREBASE_DOMAIN =
-  'https://quotes-app-a62b0-default-rtdb.europe-west1.firebasedatabase.app'
+const FIREBASE_DOMAIN = 'https://quotes-app-a62b0-default-rtdb.europe-west1.firebasedatabase.app'
 
 export async function getAllQuotes(): Promise<Quote[]> {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`)
@@ -62,20 +61,14 @@ export async function addQuote(quoteData: any) {
   return null
 }
 
-export async function addComment(requestData: {
-  quoteId: string
-  commentData: string
-}) {
-  const response = await fetch(
-    `${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`,
-    {
-      method: 'POST',
-      body: JSON.stringify(requestData.commentData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  )
+export async function addComment(requestData: { quoteId: string; commentData: string }) {
+  const response = await fetch(`${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`, {
+    method: 'POST',
+    body: JSON.stringify(requestData.commentData),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
   const data = await response.json()
 
   if (!response.ok) {

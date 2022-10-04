@@ -7,10 +7,7 @@ import classes from './QuoteForm.module.css'
 
 interface QuoteFormProps {
   isLoading?: JSX.Element | boolean
-  onAddQuote: (arg0: {
-    author: string | undefined
-    text: string | undefined
-  }) => void
+  onAddQuote: (arg0: { author: string | undefined; text: string | undefined }) => void
 }
 
 const QuoteForm = (props: QuoteFormProps) => {
@@ -43,11 +40,7 @@ const QuoteForm = (props: QuoteFormProps) => {
         message={(location) => "Are you sure you want to leave?"}
       /> */}
       <Card>
-        <form
-          onFocus={formFocusedHandler}
-          className={classes.form}
-          onSubmit={submitFormHandler}
-        >
+        <form onFocus={formFocusedHandler} className={classes.form} onSubmit={submitFormHandler}>
           {props.isLoading && (
             <div className={classes.loading}>
               <LoadingSpinner />
@@ -55,15 +48,15 @@ const QuoteForm = (props: QuoteFormProps) => {
           )}
 
           <div className={classes.control}>
-            <label htmlFor="author">Author</label>
-            <input type="text" id="author" ref={authorInputRef} />
+            <label htmlFor='author'>Author</label>
+            <input type='text' id='author' ref={authorInputRef} />
           </div>
           <div className={classes.control}>
-            <label htmlFor="text">Text</label>
-            <textarea id="text" rows={5} ref={textInputRef}></textarea>
+            <label htmlFor='text'>Text</label>
+            <textarea id='text' rows={5} ref={textInputRef}></textarea>
           </div>
           <div className={classes.actions}>
-            <button onClick={finishEnteringHandler} className="btn">
+            <button onClick={finishEnteringHandler} className='btn'>
               Add Quote
             </button>
           </div>

@@ -17,7 +17,7 @@ describe('QuotesList Component', () => {
     render(
       <MemoryRouter initialEntries={[route]}>
         <QuoteList quotes={loadedQuotes} />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     // Act
@@ -38,7 +38,7 @@ describe('QuotesList Component', () => {
     render(
       <MemoryRouter initialEntries={[route]}>
         <QuoteList quotes={loadedQuotes} />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     // Act
@@ -60,7 +60,7 @@ describe('QuotesList Component', () => {
     render(
       <MemoryRouter initialEntries={[route]}>
         <QuoteList quotes={loadedQuotes} />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     // Act

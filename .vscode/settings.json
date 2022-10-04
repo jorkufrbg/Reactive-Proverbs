@@ -2,7 +2,7 @@
     "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
     "explorer.confirmDelete": false,
     "editor.formatOnSave": true,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "editor.fontSize": 15,
     "window.zoomLevel": 1,
     "terminal.integrated.fontSize": 13,

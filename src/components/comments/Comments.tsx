@@ -30,7 +30,7 @@ const Comments = () => {
 
   if (status === 'pending') {
     comments = (
-      <div className="centered">
+      <div className='centered'>
         <LoadingSpinner />
       </div>
     )
@@ -40,27 +40,19 @@ const Comments = () => {
     comments = <CommentsList comments={loadedComments} />
   }
 
-  if (
-    status === 'completed' &&
-    (!loadedComments || loadedComments.length === 0)
-  ) {
-    comments = <p className="centered">No comments were added yet!</p>
+  if (status === 'completed' && (!loadedComments || loadedComments.length === 0)) {
+    comments = <p className='centered'>No comments were added yet!</p>
   }
 
   return (
     <section className={classes.comments}>
       <h2>User Comments</h2>
       {!isAddingComment && (
-        <button className="btn" onClick={startAddCommentHandler}>
+        <button className='btn' onClick={startAddCommentHandler}>
           Add a Comment
         </button>
       )}
-      {isAddingComment && (
-        <NewCommentForm
-          quoteId={quoteId}
-          onAddedComment={addedCommentHandler}
-        />
-      )}
+      {isAddingComment && <NewCommentForm quoteId={quoteId} onAddedComment={addedCommentHandler} />}
       {comments}
     </section>
   )

@@ -13,12 +13,7 @@ const QuoteDetail = () => {
   const params = useParams<{ quoteId: string }>()
   const { quoteId } = params
 
-  const {
-    sendRequest,
-    status,
-    data: loadedQuote,
-    error,
-  } = useHttp(getSingleQuote, true)
+  const { sendRequest, status, data: loadedQuote, error } = useHttp(getSingleQuote, true)
 
   useEffect(() => {
     sendRequest(quoteId)
@@ -26,14 +21,14 @@ const QuoteDetail = () => {
 
   if (status === 'pending') {
     return (
-      <div className="centered">
+      <div className='centered'>
         <LoadingSpinner />
       </div>
     )
   }
 
   if (error) {
-    return <p className="centered focused">{error}</p>
+    return <p className='centered focused'>{error}</p>
   }
 
   if (!loadedQuote.text) {

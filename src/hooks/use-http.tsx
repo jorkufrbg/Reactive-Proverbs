@@ -1,9 +1,6 @@
 import { useReducer, useCallback } from 'react'
 
-function httpReducer(
-  state: any,
-  action: { type: string; responseData: any; errorMessage: any }
-) {
+function httpReducer(state: any, action: { type: string; responseData: any; errorMessage: any }) {
   if (action.type === 'SEND') {
     return {
       data: null,
@@ -62,7 +59,7 @@ function useHttp(requestFunction: any, startWithPending = false) {
         }
       }
     },
-    [requestFunction]
+    [requestFunction],
   )
 
   return {

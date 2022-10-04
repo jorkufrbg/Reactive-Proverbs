@@ -18,7 +18,7 @@ describe('QuoteItem', () => {
     render(
       <MemoryRouter>
         <QuoteItem {...defaultProps} />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     // Act
@@ -33,7 +33,7 @@ describe('QuoteItem', () => {
     render(
       <MemoryRouter>
         <QuoteItem {...defaultProps} />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     // Act
@@ -48,7 +48,7 @@ describe('QuoteItem', () => {
     render(
       <MemoryRouter>
         <QuoteItem {...defaultProps} />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     // Act

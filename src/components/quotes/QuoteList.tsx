@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-// import { useHistory, useLocation } from "react-router-dom";
 import { useNavigate, useLocation } from 'react-router-dom'
 
 import QuoteItem from './QuoteItem'
@@ -16,7 +15,6 @@ const sortQuotes = (quotes: any[], ascending: boolean) => {
 }
 
 const QuoteList = (props: { quotes: any }) => {
-  // const history = useHistory();
   const navigate = useNavigate()
   const location = useLocation()
 

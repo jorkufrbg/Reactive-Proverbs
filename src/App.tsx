@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-// import { Route, Switch, Redirect } from "react-router-dom";
 import { Routes, Route, Navigate, Link } from 'react-router-dom'
 
 import LoadingSpinner from './components/UI/LoadingSpinner'
@@ -23,9 +22,7 @@ function App() {
       >
         <Routes>
           <Route path='/' element={<Navigate replace to='/quotes' />} />
-
           <Route path='/quotes' element={<AllQuotes />} />
-
           <Route path='/quotes/:quoteId' element={<QuoteDetail />}>
             <Route
               path=''
@@ -39,9 +36,7 @@ function App() {
             />
             <Route path={'comments'} element={<Comments />} />
           </Route>
-
           <Route path='/new-quote' element={<NewQuote />} />
-
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>

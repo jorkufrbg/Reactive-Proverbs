@@ -1,73 +1,69 @@
-<h1>Reactive Proverbs</h1>
-<hr><p>The purpose of this Multi Page App is to store memorable quotes or sayings I came across.</p>
-<p>Check out the live version at: https://quotes-app-a62b0.web.app</p>
+# <Your-Project-Title>Reactive Proverbs
 
-<br>
-<h2>General Information</h2>
-<hr>
-<ul>
-<li>Quotes are rendered as a list that can be sorted in ascending or descending order.</li>
-</ul>
-<ul>
-<li>A single quote post consists of a text body and name. Comments can be added to already existing quotes.</li>
-</ul>
-<ul>
-<li>This project is build using React(TypeScript), React Router and uses the Firebase API for back-end.</li>
-</ul>
+## Description
+---
 
-<br>
-<h2>Technologies Used</h2>
-<hr><ul>
-<li>React</li>
-</ul><ul>
-<li>TypeScript</li>
-</ul><ul>
-<li>React Router</li>
-</ul><ul>
-<li>Custom React Hooks</li>
-</ul><ul>
-<li>Jest</li>
-</ul>
+This Multi Page Application collects and stores interesting phrases and sayings I came across.
 
-<br>
-<h2>Features</h2>
-<hr><ul>
-<li>Build with React and TypeScript</li>
-</ul>
-<ul>
-<li>Created with [create-react-app](https://github.com/facebook/create-react-app) tool for quick set up.</li>
-</ul><ul>
-<li>Linting done with [ESLint](https://github.com/eslint/eslint)</li>
-</ul><ul>
-<li>Uses custom http hook for fetching and posting data as JSON to Firebase</li>
-</ul><ul>
-<li>Testing done with [Jest(https://github.com/facebook/jest)</li>
-</ul><ul>
-<li>Features a simple Form for submitting quotes</li>
-</ul><ul>
-<li>User can leave comments on single quotes by entering 'View Fullscreen'</li>
-</ul><ul>
-<li>Simple &amp; Dark UI</li>
-</ul>
+- The purpose of this project is to build something useful and interesing.
+- By creating this app I practiced using TypeScript, React Router and Jest.
 
-<br>
+Live version at: https://quotes-app-a62b0.web.app
 
-<h2>Setup</h2>
-<hr><p>To run this project on your computer, download the repository and open it inside a terminal in your editor</p>
-<h5>Steps</h5>
-<ul>
-<li><code>npm install</code> to install package dependencies</li>
-</ul><ul>
-<li><code>npm run start</code> to run the development server at (http://localhost:3000/)</li>
-</ul><ul>
-<li><code>npm run test</code> to run unit tests</li>
-</ul>
+## Table of Contents (Optional)
+---
 
-<h2>Usage</h2>
-<hr><p>Usage Info Body</p>
-<h5>Code Examples</h5>
-<ul>
-<li>Description of Code Example 1</li>
-</ul><p><code>import { object, string, number, date, InferType } from 'yup';</code></p><ul>
-<li>Description of Code Example 2</li>
-</ul><p><code>import { object, string, number, date, InferType } from 'yup';</code></p>
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+## General Information
+---
+
+- Quotes are rendered as a list that can be sorted in ascending or descending order.
+- A single quote post consists of a text body and name.
+- Comments can be added to already existing quotes.
+
+## Technologies Used
+---
+
+- [React v18](https://reactjs.org/) as front-end library.
+- [TypeScript](https://www.typescriptlang.org/) for better tooling and type safety.
+- [React Router](https://reactrouter.com/) for client side routing.
+- [Jest](https://jestjs.io/) for testing framework.
+- Custom React hooks for fetching and posting data to the Firebase API
+
+## Features
+---
+
+- Created with the [create-react-app](https://github.com/facebook/create-react-app) tool.
+- Linting done with [ESLint](https://github.com/eslint/eslint).
+- Features a simple form for submitting quotes.
+- User can add comments to single quotes by entering the 'View Fullscreen' route.
+- Simple & Dark UI
+
+## Screenshots
+---
+
+All Quotes List
+![All Quotes](assets/images/all-quotes.png)
+
+Add Quote Form
+![Add Quote Form](assets/images/add-quote.png)
+
+Single Quote Route
+![Single Quote Route](assets/images/single-quote.png)
+
+Quote Comment Form
+![Quote Comment Form](assets/images/quote-comment.png)
+
+## Usage and Setup
+---
+
+To run this project locally, download the repository and open it inside terminal in your editor. Following commands are available:
+
+- `npm install` to install all required dependencies (creates /node_modules folder).
+- `npm run start` to run a server which reloads the page as files are being saved. Typically the server runs at http://localhost:3000
+- `npm run test` to test all files whose extensions end in `.test.ts`. Jest will automatically run as soon as it detects changes. It can be run side by side with the development server so that changes can be previewed and tested at the same time.
+- `npm run build` will create an optimized JS and CSS build in `./build/` folder in the root directory.

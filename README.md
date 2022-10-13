@@ -6,25 +6,52 @@
 This Multi Page Application collects and stores interesting phrases and sayings I came across.
 
 - The purpose of this project is to build something useful and interesing.
-- By creating this app I practiced using TypeScript, React Router and Jest.
-
-Live version at: https://quotes-app-a62b0.web.app
+- By creating this app I used TypeScript, React Router and Jest.
 
 ## Table of Contents (Optional)
 ---
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+- [<Your-Project-Title>Reactive Proverbs](#your-project-titlereactive-proverbs)
+  - [## Description](#-description)
+  - [## Table of Contents (Optional)](#-table-of-contents-optional)
+  - [## General Information](#-general-information)
+  - [## Technologies Used](#-technologies-used)
+  - [## Features](#-features)
+  - [## Screenshots](#-screenshots)
+  - [## Usage and Setup](#-usage-and-setup)
 
 ## General Information
 ---
-
+Live version can be seen at: https://quotes-app-a62b0.web.app
 - Quotes are rendered as a list that can be sorted in ascending or descending order.
 - A single quote post consists of a text body and name.
 - Comments can be added to already existing quotes.
 
+This project has the following folder structure:
+```text
+Reactive-Proverbs/
+├─ assets
+│  └─ images
+├─ build/
+├─ node_modules/
+├─ public/
+├─ src/
+│  └─ components
+│  └─ hooks
+│  └─ lib
+│  └─ pages
+│  └─ ...
+├─ package.json
+├─ tsconfig.json
+├─ .eslintrc.json
+└─ .gitignore
+```
+Folder structure description:
+
+* `tsconfig.json` contains TypeScript-specific options for the project.
+* `.eslintrc.json` stores the settings for the linter.
+* `package.json` contains dependencies, shortcuts for commands used to run tests, preview, and deployment.
+* `public` contains static assets like the HTML page to be deployed.
+* `src` contains the TypeScript and CSS code. `index.tsx` is the entry-point.
 ## Technologies Used
 ---
 
@@ -32,13 +59,14 @@ Live version at: https://quotes-app-a62b0.web.app
 - [TypeScript](https://www.typescriptlang.org/) for better tooling and type safety.
 - [React Router](https://reactrouter.com/) for client side routing.
 - [Jest](https://jestjs.io/) for testing framework.
-- Custom React hooks for fetching and posting data to the Firebase API
+- [Firebase](https://firebase.google.com/) for back-end.
 
 ## Features
 ---
 
 - Created with the [create-react-app](https://github.com/facebook/create-react-app) tool.
 - Linting done with [ESLint](https://github.com/eslint/eslint).
+- Custom React hooks for fetching and posting data to the Firebase API
 - Features a simple form for submitting quotes.
 - User can add comments to single quotes by entering the 'View Fullscreen' route.
 - Simple & Dark UI

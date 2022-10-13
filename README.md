@@ -1,6 +1,6 @@
 <h1>Reactive Proverbs</h1>
 <hr><p>The purpose of this Multi Page App is to store memorable quotes or sayings I came across.</p>
-This site was built using [GitHub Pages](https://pages.github.com/).
+<p>Check out the live version at:</p>(https://quotes-app-a62b0.web.app/).
 <h2>General Information</h2>
 <hr><ul>
 <li>Quotes are rendered as a list that can be sorted in ascending or descending order.</li>

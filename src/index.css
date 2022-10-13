@@ -8,7 +8,8 @@ body {
   background-color: #263238;
 }
 
-button {
+button,
+a {
   transition: all ease 0.5s;
 }
 

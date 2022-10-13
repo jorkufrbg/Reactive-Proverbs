@@ -1,49 +1,50 @@
 <h1>Reactive Proverbs</h1>
-<hr><p>Simple Application for storing cool quotes</p><h2>General Information</h2>
+<hr><p>The purpose of this Multi Page App is to store memorable quotes or sayings I came across.</p>
+This site was built using [GitHub Pages](https://pages.github.com/).
+<h2>General Information</h2>
 <hr><ul>
-<li>Multi Page React Application for storing memorable quotes I came across. Feel free to add some!</li>
+<li>Quotes are rendered as a list that can be sorted in ascending or descending order.</li>
 </ul><ul>
-<li>I keep forgetting the cool proverbs :)</li>
+<li>A single quote post consists of a text body and name. Comments can be added to already existing quotes.</li>
 </ul><ul>
-<li>Learning and practicing React, React Router, Custom Hooks and http requests from the Firebase API</li>
+<li>This project is build using React(TypeScript), React Router and uses the Firebase API for back-end.</li>
 </ul><h2>Technologies Used</h2>
 <hr><ul>
-<li>JavaScript</li>
-</ul><ul>
 <li>React</li>
+</ul><ul>
+<li>TypeScript</li>
+</ul><ul>
+<li>React Router</li>
+</ul><ul>
+<li>Custom React Hooks</li>
+</ul><ul>
+<li>Jest</li>
 </ul><h2>Features</h2>
 <hr><ul>
-<li>Add andd store proverbs or quotes you want to remember</li>
+<li>Build with React and TypeScript</li>
 </ul><ul>
-<li>Add comments to already existing posts</li>
-</ul><h2>Screenshots</h2>
-<hr><p><img src="https://jorkufrbg.github.io/static/media/quotes.b2fb4d96.svg" alt=""></p><h2>Setup</h2>
-<hr><p>React, React Router, Jest and React Testing Library and at some point TypeScript</p><h5>Steps</h5><ul>
-<li>Download or fork the repo by clicking on the button at the top right of the page. Afterwards open your terminal and perform the following commands</li>
+<li>Linting with ESLint</li>
 </ul><ul>
-<li>#Install packages from the root directory</li>
+<li>Uses custom http hook for fetching and posting data as JSON to Firebase</li>
 </ul><ul>
-<li>npm install</li>
+<li>Testing done with Jest</li>
 </ul><ul>
-<li>Start the development server</li>
+<li>Features a simple Form for submitting quotes</li>
 </ul><ul>
-<li>npm start</li>
+<li>User can leave comments on single quotes by entering 'View Fullscreen'</li>
 </ul><ul>
-<li>Finally, run npm test and Jest will print this message:</li>
+<li>Simple &amp; Dark UI</li>
+</ul><h2>Setup</h2>
+<hr><p>To run this project on your computer, download the repository and open it inside a terminal in your editor</p>
+<h5>Steps</h5><ul>
+<li><code>npm install</code> to install package dependencies</li>
+</ul><ul>
+<li><code>npm run start</code> to run the development server at http://localhost:3000/</li>
+</ul><ul>
+<li><code>npm run test</code> to run unit tests</li>
 </ul><h2>Usage</h2>
-<hr><p>Store Proverbs or Quotes, or comment other existing such</p><h5>Code Examples</h5><ul>
-<li>TBA</li>
-</ul><p><code>TBA</code></p><h2>Project Status</h2>
-<hr><p>In Progress</p><h2>Improvements</h2>
-<hr><ul>
-<li>Add better validation</li>
-</ul><ul>
-<li>Improve Unit Tests</li>
-</ul><ul>
-<li>Revise Custom Hooks</li>
-</ul><h2>Acknowledgement</h2>
-<hr><ul>
-<li>Sharing</li>
-</ul><ul>
-<li>Maximilian Schwarzmüller for the awesome learning materials and extensive coverage</li>
-</ul>
+<hr><p>Usage Info Body</p><h5>Code Examples</h5><ul>
+<li>Description of Code Example 1</li>
+</ul><p><code>import { object, string, number, date, InferType } from 'yup';</code></p><ul>
+<li>Description of Code Example 2</li>
+</ul><p><code>import { object, string, number, date, InferType } from 'yup';</code></p>

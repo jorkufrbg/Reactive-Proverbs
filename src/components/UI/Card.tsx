@@ -1,11 +1,11 @@
-import classes from './Card.module.css';
+import classes from './Card.module.css'
 
-type CardProps = {
+interface CardProps {
   children?: React.ReactNode
-};
+}
 
-const Card = (props:CardProps) => {
-  return <div className={classes.card}>{props.children}</div>;
-};
+const Card = (props: CardProps) => {
+  return <div className={classes.card}>{props.children}</div>
+}
 
-export default Card;
+export default Card

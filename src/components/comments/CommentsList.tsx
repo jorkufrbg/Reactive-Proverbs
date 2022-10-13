@@ -1,10 +1,9 @@
-import CommentItem from './CommentItem';
-import classes from './CommentsList.module.css';
+import CommentItem from './CommentItem'
+import classes from './CommentsList.module.css'
 
-type CommentsListProps = {
-  comments: { id: string, text: string }[];
+interface CommentsListProps {
+  comments: Array<{ id: string; text: string }>
 }
-
 
 const CommentsList = (props: CommentsListProps) => {
   return (
@@ -13,7 +12,7 @@ const CommentsList = (props: CommentsListProps) => {
         <CommentItem key={comment.id} text={comment.text} />
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default CommentsList;
+export default CommentsList

@@ -1,79 +1,79 @@
-import React from "react";
-import { waitFor, render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import userEvent from "@testing-library/user-event";
-import QuoteList from "./QuoteList";
-import { MemoryRouter } from "react-router-dom";
+import React from 'react'
+import { waitFor, render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import userEvent from '@testing-library/user-event'
+import QuoteList from './QuoteList'
+import { MemoryRouter } from 'react-router-dom'
 
-describe("QuotesList Component", () => {
-  test("renders the Button element and Quotes List Items", () => {
-    //Arrange
-    const route = "/quotes";
+describe('QuotesList Component', () => {
+  test('renders the Button element and Quotes List Items', () => {
+    // Arrange
+    const route = '/quotes'
     const loadedQuotes = [
-      { id: "q1", author: "User 1", text: "Learning React is fun!" },
-      { id: "q2", author: "User 2", text: "Learning Jest is great!" },
-    ];
+      { id: 'q1', author: 'User 1', text: 'Learning React is fun!' },
+      { id: 'q2', author: 'User 2', text: 'Learning Jest is great!' },
+    ]
 
     render(
       <MemoryRouter initialEntries={[route]}>
         <QuoteList quotes={loadedQuotes} />
-      </MemoryRouter>
-    );
+      </MemoryRouter>,
+    )
 
-    //Act
-    const sortingButton = screen.getByRole("button");
+    // Act
+    const sortingButton = screen.getByRole('button')
 
-    //Assert
-    expect(sortingButton).toBeInTheDocument();
-  });
+    // Assert
+    expect(sortingButton).toBeInTheDocument()
+  })
 
-  test("is in Ascending order", async () => {
-    //Arrange
-    const route = "/quotes";
+  test('is in Ascending order', async () => {
+    // Arrange
+    const route = '/quotes'
     const loadedQuotes = [
-      { id: "q1", author: "User 1", text: "Learning React is fun!" },
-      { id: "q2", author: "User 2", text: "Learning Jest is great!" },
-    ];
+      { id: 'q1', author: 'User 1', text: 'Learning React is fun!' },
+      { id: 'q2', author: 'User 2', text: 'Learning Jest is great!' },
+    ]
 
     render(
       <MemoryRouter initialEntries={[route]}>
         <QuoteList quotes={loadedQuotes} />
-      </MemoryRouter>
-    );
+      </MemoryRouter>,
+    )
 
-    //Act
-    const sortingButton = screen.getByRole("button");
+    // Act
+    const sortingButton = screen.getByRole('button')
 
-    //Assert
+    // Assert
     // expect(sortingButton).toHaveTextContent("Sort Ascending", { exact: false });
-    expect(sortingButton).toHaveTextContent("Sort Ascending");
-  });
+    expect(sortingButton).toHaveTextContent('Sort Ascending')
+  })
 
-  test("is in Descending order", async () => {
-    //Arrange
-    const route = "/quotes";
+  test('is in Descending order', async () => {
+    // Arrange
+    const route = '/quotes'
     const loadedQuotes = [
-      { id: "q1", author: "User 1", text: "Learning React is fun!" },
-      { id: "q2", author: "User 2", text: "Learning Jest is great!" },
-    ];
+      { id: 'q1', author: 'User 1', text: 'Learning React is fun!' },
+      { id: 'q2', author: 'User 2', text: 'Learning Jest is great!' },
+    ]
 
     render(
       <MemoryRouter initialEntries={[route]}>
         <QuoteList quotes={loadedQuotes} />
-      </MemoryRouter>
-    );
+      </MemoryRouter>,
+    )
 
-    //Act
-    const sortingButton = screen.getByRole("button");
-    userEvent.click(sortingButton);
+    // Act
+    const sortingButton = screen.getByRole('button')
+    userEvent.click(sortingButton)
 
-    //Assert
+    // Assert
     await waitFor(() => {
-      const sortingButtonChanged = screen.getByRole("button");
+      const sortingButtonChanged = screen.getByRole('button')
       // expect(sortingButtonChanged).toHaveTextContent("Sort Descending", {
       //   exact: false,
       // });
-      expect(sortingButtonChanged).toHaveTextContent("Sort Descending");
-    });
-  });
-});
+      expect(sortingButtonChanged).toHaveTextContent('Sort Descending')
+    })
+  })
+})

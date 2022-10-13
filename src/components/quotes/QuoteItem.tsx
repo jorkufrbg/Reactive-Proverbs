@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-import classes from "./QuoteItem.module.css";
+import classes from './QuoteItem.module.css'
 
-type QuoteItemProps = { text: string; author: string; id: string }
+interface QuoteItemProps {
+  text: string
+  author: string
+  id: string
+}
 
 const QuoteItem = (props: QuoteItemProps) => {
   return (
@@ -13,11 +17,11 @@ const QuoteItem = (props: QuoteItemProps) => {
         </blockquote>
         <figcaption>{props.author}</figcaption>
       </figure>
-      <Link className="btn" to={`/quotes/${props.id}`}>
+      <Link className='btn' to={`/quotes/${props.id}`}>
         View Fullscreen
       </Link>
     </li>
-  );
-};
+  )
+}
 
-export default QuoteItem;
+export default QuoteItem

@@ -1,33 +1,30 @@
-import { Fragment, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { Fragment, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import QuoteForm from "../components/quotes/QuoteForm";
-import useHttp from "../hooks/use-http";
-import { addQuote } from "../lib/api";
+import QuoteForm from '../components/quotes/QuoteForm'
+import useHttp from '../hooks/use-http'
+import { addQuote } from '../lib/api'
 
 const NewQuote = () => {
-  const { sendRequest, status } = useHttp(addQuote);
-  const history = useHistory();
+  const { sendRequest, status } = useHttp(addQuote)
+  const navigate = useNavigate()
 
   useEffect(() => {
-    if (status === "completed") {
-      history.push("/quotes");
+    if (status === 'completed') {
+      navigate('/quotes')
     }
-  }, [status, history]);
+  }, [status, navigate])
 
   const addQuoteHandler = (quoteData: any) => {
-    sendRequest(quoteData);
-  };
+    sendRequest(quoteData)
+  }
 
   return (
     <Fragment>
-      <h2 className="center">Share some wisdom!</h2>
-      <QuoteForm
-        isLoading={status === "pending"}
-        onAddQuote={addQuoteHandler}
-      />
+      <h2 className='center'>Share some wisdom!</h2>
+      <QuoteForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />
     </Fragment>
-  );
-};
+  )
+}
 
-export default NewQuote;
+export default NewQuote

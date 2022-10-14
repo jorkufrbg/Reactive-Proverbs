@@ -16,6 +16,7 @@ export async function getAllQuotes(): Promise<Quote[]> {
 
   const transformedQuotes = []
 
+  //Transforms all objects received from Firebase, into objects that have the necessary structure and format we need for our front-end
   for (const key in data) {
     const quoteObj = {
       id: key,

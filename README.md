@@ -86,7 +86,7 @@ To run this project locally, download the repository and open it inside terminal
 
 ## Code Examples
 ---
-#####Quote Item Component
+####Quote Item Component
 The `QuoteItem.tsx` renders the quote text and author. Additionally there is the 'View Fullscreen' link, that leads to the single quote page.
 
 On the top of the page the Link element is imported. It lets the user navigate to another page by clicking on it. `react-router-dom` renders an accessible `<a>` element with a real `href` that points to the resource it's linking to.

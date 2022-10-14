@@ -72,17 +72,7 @@ Reactive-Proverbs/
 ## Screenshots
 ---
 
-All Quotes List
-![All Quotes](assets/images/all-quotes.png)
-
-Add Quote Form
-![Add Quote Form](assets/images/add-quote.png)
-
-Single Quote Route
-![Single Quote Route](assets/images/single-quote.png)
-
-Quote Comment Form
-![Quote Comment Form](assets/images/quote-comment.png)
+![ReactiveProverbs Gif](assets/images/reactive-quotes-demo.gif)
 
 ## Usage and Setup
 ---

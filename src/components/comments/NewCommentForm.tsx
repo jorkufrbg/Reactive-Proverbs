@@ -38,7 +38,7 @@ const NewCommentForm = (props: NewCommentFormProps) => {
         </div>
       )}
       <div className={classes.control} onSubmit={submitFormHandler}>
-        <label htmlFor='comment'>Your Comment</label>
+        <label htmlFor='comment'>Add your Comment!</label>
         <textarea id='comment' rows={5} ref={commentTextRef}></textarea>
       </div>
       <div className={classes.actions}>

@@ -28,6 +28,8 @@ function httpReducer(state: any, action: { type: string; responseData: any; erro
   return state
 }
 
+//  The useHttp hook works such that it wants a function that can be called by the hook to send the actual request. Those functions are the ones defined in api.js. This are different functions for sending different kinds of requests to firebase
+
 function useHttp(requestFunction: any, startWithPending = false) {
   const [httpState, dispatch] = useReducer(httpReducer, {
     status: startWithPending ? 'pending' : null,
@@ -62,6 +64,8 @@ function useHttp(requestFunction: any, startWithPending = false) {
     [requestFunction],
   )
 
+  //  This hook returns a function ('sendRequest'), to actually send given request.
+  //  This hook also features (...httpState,), which is an object with the current `status` of the request: success, fail or pending.  This object also contains the response data and possibly error data.
   return {
     sendRequest,
     ...httpState,

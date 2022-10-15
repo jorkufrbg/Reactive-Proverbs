@@ -1,36 +1,45 @@
 # <Your-Project-Title>Reactive Proverbs
-
-## Description
 ---
 
-This Multi Page Application collects and stores interesting phrases and sayings I came across. The purpose of this project is to build something useful and interesing.
-
-- Quotes are rendered as a list that can be sorted in ascending or descending order.
-- A single quote consists of text body and name.
-- Comments can be added to already existing quotes.
+This Multi-Page Application collects and stores interesting quotes and phrases I came across. Another feature is the ability to add comments to single quote posts. Feel free to drop some words of wisdom!
   
-Live version can be seen at: https://quotes-app-a62b0.web.app
+Live version can be viewed [here!](https://quotes-app-a62b0.web.app)
+<p align="center">
+  <img src="assets/images/reactive-quotes-demo.gif">
+</p>
 
-## Table of Contents (Optional)
+## Table of Contents 
 ---
 - Reactive Proverbs
-  - [General Information](#general-information)
-  - [Technologies Used](#technologies-used)
   - [Features](#features)
-  - [Screenshots](#screenshots)
+  - [Technologies Used](#technologies-used)
+  - [Folder structure](#folder-structure)
   - [Usage and Setup](#usage-and-setup)
+  - [Code Samples](#usage-and-setup)
 
 
-## General Information
+## Features
 ---
-Folder structure description:
 
-* `tsconfig.json` contains TypeScript-specific options for the project.
-* `.eslintrc.json` stores the settings for the linter.
-* `package.json` contains dependencies, shortcuts for commands used to run tests, preview, and deployment.
-* `public` contains static assets like the HTML page to be deployed.
-* `src` contains the TypeScript and CSS code. `index.tsx` is the entry-point.
+- Quotes are rendered as a list that can be sorted in ascending or descending order.
+- Features simple forms for submitting quotes and comments.
+- Custom hooks for interacting with the Firebase API.
+- Single quotes can be expanded in Fullscreen, and comments can be added
+- Simple & Dark UI
 
+## Technologies used
+---
+- [React v18](https://reactjs.org/) for the frond-end.
+- [TypeScript](https://www.typescriptlang.org/) for better tooling and type safety.
+- [React Router](https://reactrouter.com/) for client side routing.
+- [Firebase](https://firebase.google.com/) for back-end.
+- [Jest](https://jestjs.io/) for tests.
+- [ESLint](https://github.com/eslint/eslint) for linting.
+- [create-react-app](https://github.com/facebook/create-react-app) for quick and painless setup.
+
+
+## Folder structure :
+---
 This project has the following folder structure:
 ```text
 Reactive-Proverbs/
@@ -51,28 +60,15 @@ Reactive-Proverbs/
 └─ .gitignore
 ```
 
-## Technologies Used
----
-- [React v18](https://reactjs.org/) as front-end library.
-- [TypeScript](https://www.typescriptlang.org/) for better tooling and type safety.
-- [React Router](https://reactrouter.com/) for client side routing.
-- [Jest](https://jestjs.io/) for testing framework.
-- [Firebase](https://firebase.google.com/) for back-end.
+**Of note:**
+* `tsconfig.json` contains TypeScript-specific options for the project.
+* `.eslintrc.json` stores the settings for the linter.
+* `package.json` contains package dependencies, and commands used to run tests, development server, and deployment.
+* `public` contains static assets like the HTML page to be deployed.
+* `src` contains the TypeScript and CSS code.
+*  `index.tsx` is the entry-point.
 
-## Features
----
 
-- Created with the [create-react-app](https://github.com/facebook/create-react-app) tool.
-- Linting done with [ESLint](https://github.com/eslint/eslint).
-- Custom React hooks for fetching and posting data to the Firebase API
-- Features a simple form for submitting quotes.
-- User can add comments to single quotes by entering the 'View Fullscreen' route.
-- Simple & Dark UI
-
-## Screenshots
----
-
-![ReactiveProverbs Gif](assets/images/reactive-quotes-demo.gif)
 
 ## Usage and Setup
 ---
@@ -84,7 +80,7 @@ To run this project locally, download the repository and open it inside terminal
 - `npm run test` to test all files whose extensions end in `.test.ts`. Jest will automatically run as soon as it detects changes. It can be run side by side with the development server so that changes can be previewed and tested at the same time.
 - `npm run build` will create an optimized JS and CSS build in `./build/` folder in the root directory.
 
-## Code Examples
+## Code Samples
 ---
 ####Quote Item Component
 The `QuoteItem.tsx` renders the quote text and author. Additionally there is the 'View Fullscreen' link, that leads to the single quote page.

@@ -336,3 +336,7 @@ export default MainNavigation
 ---
 ## Contributing
 All contributions and suggestions are welcome! Feel free to drop some words of wisdom.
+
+---
+## License
+This project is licensed under the [CC0 1.0 Universal](LICENSE.md) Creative Commons License - see the [LICENSE.md](LICENSE.md) file for details.

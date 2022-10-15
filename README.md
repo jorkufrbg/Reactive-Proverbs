@@ -93,47 +93,54 @@ To run this project locally, download the repository and open it inside terminal
 
 ## Code Samples
 ---
-####Quote Item Component
-The `QuoteItem.tsx` renders the quote text and author. Additionally there is the 'View Fullscreen' link, that leads to the single quote page.
 
-On the top of the page the Link element is imported. It lets the user navigate to another page by clicking on it. `react-router-dom` renders an accessible `<a>` element with a real `href` that points to the resource it's linking to.
+##### AllQuotes Component
+The `AllQuotes.tsx` page renders a list of quote items.
 
-Then styles are imported using CSS Modules.
+For handling requests, we call the custom `useHttp` hook and the `getAllQuotes` function from the `api.js` file.
 
-Afterwards a type named QuoteItemProp is defined. It specifies the properties of the component. `text`, `author` and `id` are required strings.
+Inside the AllQuotes Component function we call `useHttp` and pass a pointer at  `getAllQuotes` to it. As a second argument we set `true`, for indicating that the component starts in loading state.
+
+From the custom hook we extract the `sendRequest` function for sending the actual request, the request `status`,  request `data` and `error`.
+
+By using the useEffect hook, we trigger the `sendRequest` function when the component renders.
+
+Depending on the requests `status` we can render different states or elements eg. Loading spinner, an error message and ultimately the `QuoteList`.
+
 ```
-import { Link } from 'react-router-dom'
-import classes from './QuoteItem.module.css'
+import { useEffect } from 'react'
 
-interface QuoteItemProps {
-  text: string
-  author: string
-  id: string
+import QuoteList from '../components/quotes/QuoteList'
+import LoadingSpinner from '../components/UI/LoadingSpinner'
+import NoQuotesFound from '../components/quotes/NoQuotesFound'
+import useHttp from '../hooks/use-http'
+import { getAllQuotes } from '../lib/api'
+
+const AllQuotes = () => {
+  const { sendRequest, status, data: loadedQuotes, error } = useHttp(getAllQuotes, true)
+
+  useEffect(() => {
+    sendRequest()
+  }, [sendRequest])
+
+  if (status === 'pending') {
+    return (
+      <div className='centered'>
+        <LoadingSpinner />
+      </div>
+    )
+  }
+
+  if (error) {
+    return <p className='centered focused'>{error}</p>
+  }
+
+  if (status === 'completed' && (!loadedQuotes || loadedQuotes.length === 0)) {
+    return <NoQuotesFound />
+  }
+
+  return <QuoteList quotes={loadedQuotes} />
 }
 
-const QuoteItem = (props: QuoteItemProps) => {
-  return (
-    <li className={classes.item}>
-      <figure>
-        <blockquote>
-          <p>{props.text}</p>
-        </blockquote>
-        <figcaption>{props.author}</figcaption>
-      </figure>
-      <Link className='btn' to={`/quotes/${props.id}`}>
-        View Fullscreen
-      </Link>
-    </li>
-  )
-}
-
-export default QuoteItem
-```
-
-
-
-#####Custom Hooks (useHttp)
-
-```
-
+export default AllQuotes
 ```

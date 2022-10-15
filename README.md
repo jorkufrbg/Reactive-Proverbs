@@ -12,6 +12,8 @@
   - [Usage and Setup](#usage-and-setup)
   - [Code Samples](#code-samples)
   - [Styling](#styling-with-css-modules)
+  - [Contributing](#contributing)
+  - [License](#license)
 <br/>
 
 ---

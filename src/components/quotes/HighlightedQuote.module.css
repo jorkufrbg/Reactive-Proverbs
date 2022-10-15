@@ -18,3 +18,25 @@
   text-align: right;
   color: #a1e0e0;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .quote p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .quote {
+    padding: 2rem;
+    margin: 2.5rem auto;
+  }
+
+  .quote p {
+    font-size: 1.2rem
+  }
+
+  .quote figcaption {
+    font-size: 1rem;
+  }
+}

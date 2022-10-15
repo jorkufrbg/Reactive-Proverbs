@@ -1,6 +1,6 @@
 {
     "name": "react-quotes",
-    "version": "0.1.0",
+    "version": "1.1.0",
     "private": true,
     "dependencies": {
         "@types/jest": "^29.1.1",
@@ -8,6 +8,7 @@
         "@types/react": "^18.0.21",
         "@types/react-dom": "^18.0.6",
         "depcheck": "^1.4.3",
+        "dotenv": "^16.0.3",
         "eslint-config-react-app": "^7.0.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -32,6 +33,7 @@
     },
     "browserslist": {
         "production": [
+            "defaults",
             "not dead",
             "not op_mini all"
         ],

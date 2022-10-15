@@ -124,3 +124,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.firebaserc
+firebase.json
+.firebase/
+.vscode/
+package-lock.json
+# dotenv environment variables file
+.env
+.env.test
+build/

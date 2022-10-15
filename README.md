@@ -1,22 +1,28 @@
-# <Your-Project-Title>Reactive Proverbs
----
-
-This Multi-Page Application collects and stores interesting quotes and phrases I came across. Another feature is the ability to add comments to single quote posts. Feel free to drop some words of wisdom!
-  
-Live version can be viewed [here!](https://quotes-app-a62b0.web.app)
 <p align="center">
   <img src="assets/images/reactive-quotes-demo.gif">
 </p>
 
+<br/>
+
 ## Table of Contents 
 ---
 - Reactive Proverbs
+  - [General Information](#general-information)
   - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Folder structure](#folder-structure)
   - [Usage and Setup](#usage-and-setup)
   - [Code Samples](#usage-and-setup)
 
+<br/>
+
+## General Information
+---
+This Multi-Page Application collects and stores interesting quotes and phrases I came across. Another feature is the ability to add comments to single quote posts. Feel free to drop some words of wisdom!
+  
+Live version can be viewed [here!](https://quotes-app-a62b0.web.app)
+
+<br/>
 
 ## Features
 ---
@@ -26,6 +32,8 @@ Live version can be viewed [here!](https://quotes-app-a62b0.web.app)
 - Custom hooks for interacting with the Firebase API.
 - Single quotes can be expanded in Fullscreen, and comments can be added
 - Simple & Dark UI
+
+<br/>
 
 ## Technologies used
 ---
@@ -37,6 +45,7 @@ Live version can be viewed [here!](https://quotes-app-a62b0.web.app)
 - [ESLint](https://github.com/eslint/eslint) for linting.
 - [create-react-app](https://github.com/facebook/create-react-app) for quick and painless setup.
 
+<br/>
 
 ## Folder structure :
 ---
@@ -68,7 +77,7 @@ Reactive-Proverbs/
 * `src` contains the TypeScript and CSS code.
 *  `index.tsx` is the entry-point.
 
-
+<br/>
 
 ## Usage and Setup
 ---
@@ -79,6 +88,8 @@ To run this project locally, download the repository and open it inside terminal
 - `npm run start` to run a server which reloads the page as files are being saved. Typically the server runs at http://localhost:3000
 - `npm run test` to test all files whose extensions end in `.test.ts`. Jest will automatically run as soon as it detects changes. It can be run side by side with the development server so that changes can be previewed and tested at the same time.
 - `npm run build` will create an optimized JS and CSS build in `./build/` folder in the root directory.
+
+<br/>
 
 ## Code Samples
 ---

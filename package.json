@@ -1,6 +1,6 @@
 {
     "name": "react-quotes",
-    "version": "0.1.0",
+    "version": "1.1.0",
     "private": true,
     "dependencies": {
         "@types/jest": "^29.1.1",
@@ -33,6 +33,7 @@
     },
     "browserslist": {
         "production": [
+            "defaults",
             "not dead",
             "not op_mini all"
         ],

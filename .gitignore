@@ -133,3 +133,4 @@ package-lock.json
 .env
 .env.test
 build/
+.prettierrc

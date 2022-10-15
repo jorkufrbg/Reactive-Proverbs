@@ -93,7 +93,7 @@ To run this project locally, download the repository and open it inside the term
 
 ---
 ## Code Samples
-##### AllQuotes Component
+#### AllQuotes Component
 The `AllQuotes.tsx` page renders a list of quote items. For handling requests, we call the custom `useHttp` hook and the `getAllQuotes` function from the `api.tsx` file.
 
 Inside the AllQuotes Component function we call `useHttp` and pass a pointer at  `getAllQuotes` to it. As a second argument we set `true`, for indicating that the component starts in loading state.
@@ -146,7 +146,7 @@ export default AllQuotes
 
 <br/>
 
-#### httpReducer function
+### httpReducer function
 `useReducer` just like `useState` returns an Array with two values. By using Array destructuring we can extract and save those values in separate constants. Those values are the lates `state` snapshot and a function that dispatches an `action`, which in turn can trigger an update of the sate.
 
 By dispatching an `action` it gets consumed by the first argument that is passed to `useReducer()`. This is called a reducer function, it receives the latest `state` snapshot and returns the new and **updated** `state`. Additionally we can set initial state.
@@ -189,7 +189,7 @@ function httpReducer(state: any, action: { type: string; responseData: any; erro
 
 <br/>
 
-#### useHttp custom React Hook
+### useHttp custom React Hook
 Custom hooks are regular functions just like the built-in hooks (eg. useState), but they can also contain and outsource stateful logic into reusable functions. They have access to the built-in hooks like `useEffect` and etc.
 
 When there is component logic that needs to be used by multiple components, we can extract that logic into a custom Hook. 
@@ -260,7 +260,7 @@ export default useHttp
 
 <br/>
 
-#### api.tsx
+### api.tsx
 `api.tsx` contains functions that will send requests to Firebase in conjunction with the custom `useHttp` hook. There are different functions for sending different kinds of requests. Simple error handling is uncluded aswell.
 
 For example the `getAllQuotes` function gets all quotes from Firebase and transforms them into an Array of objects that have the necessary structure and format for our front-end.
@@ -297,7 +297,8 @@ This project supports CSS Modules using the `[name].module.css` file naming conv
 
 Styling the `MainNavigation` component is easy. We create the `MainNavigation.module.css` file, in the same directory as `MainNavigation.tsx` and import the stylesheet as `classes`.
 <br/>
-##### MainNavigation.tsx
+
+### MainNavigation.module.css
 
 ```
 .header {
@@ -318,7 +319,7 @@ Styling the `MainNavigation` component is easy. We create the `MainNavigation.mo
 ```
 <br>
 
-#### MainNavigation.tsx
+### MainNavigation.tsx
 ```
 import classes from './MainNavigation.module.css'
 

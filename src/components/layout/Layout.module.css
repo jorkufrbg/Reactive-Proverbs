@@ -9,3 +9,15 @@
   color: white;
   font-size: 2rem;
 }
+
+
+@media only screen and (max-width: 450px) {
+
+  .main {
+    margin: 2rem auto;
+  }
+
+  .main h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -38,8 +38,31 @@
   color: #009688;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 0 5%;
+  }
+
   .logo {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header {
+    justify-content: center;
+  }
+
+  .nav li {
     font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .nav li:first-of-type {
+    margin-right: 5rem;
+  }
+
+  .logo {
+    display: none;
   }
 }

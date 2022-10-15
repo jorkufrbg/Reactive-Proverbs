@@ -6,8 +6,6 @@ interface Quote {
 
 const FIREBASE_DOMAIN = 'https://quotes-app-a62b0-default-rtdb.europe-west1.firebasedatabase.app'
 
-//  This are different functions for sending different kinds of requests to firebase
-//  This function gets all quotes from Firebase and transforms them into an Array 
 export async function getAllQuotes(): Promise<Quote[]> {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`)
   const data = await response.json()
@@ -18,7 +16,6 @@ export async function getAllQuotes(): Promise<Quote[]> {
 
   const transformedQuotes = []
 
-  //  Transforms all objects received from Firebase, into objects that have the necessary structure and format we need for our front-end
   for (const key in data) {
     const quoteObj = {
       id: key,
@@ -47,7 +44,6 @@ export async function getSingleQuote(quoteId: string) {
   return loadedQuote
 }
 
-//  This function sends a POST request to Firebase, to a `quotes` node, where the date is sent and storred. It also features some simple error han
 export async function addQuote(quoteData: any) {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
     method: 'POST',

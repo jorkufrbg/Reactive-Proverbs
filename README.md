@@ -160,6 +160,8 @@ Reducer functions can be defined outside of the component function, because they
 Depending on the `action` dispatched, the reducer function returns a modified state snapshot.
 
 ```
+import { useReducer, useCallback } from 'react'
+
 function httpReducer(state: any, action: { type: string; responseData: any; errorMessage: any }) {
   if (action.type === 'SEND') {
     return {
@@ -188,6 +190,7 @@ function httpReducer(state: any, action: { type: string; responseData: any; erro
   return state
 }
 ```
+
 <br/>
 
 #### useHttp custom React Hook
@@ -198,6 +201,22 @@ This custom hook handles sending requests to the Firebase API, evaluates the res
 This way we store the main logic inside the custom hook, but the data specific logic is stored inside the component that needs the data.
 
 `useHttp` requires a function that can be called by the hook to send the actual request. Those functions are the ones defined in `api.js`.
+
+
+
+The `sendRequest` function returns a Promise, which allows us to react to the response or possible errors. The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+After dispatching the 'SEND' action we set `responseData` and `errorMessage` to an empty or undefined value.
+
+In case of successful response the `requestData` received from the `requestFunction` is stored in the `responseData` variable.
+Afterwards the 'SUCCESS' action gets dispatched and  `responseData` is merged with the state object.
+In case of an `error` we dispatch the 'ERROR' action, which sets the `errorMessage` to `error.message` or a default message.The useCallback Hook only runs when one of its dependencies update. In our casechanges in the`requestFunction`.
+
+By encapsulating the `sendRequest` function with the `useCallback` hook we prevent an infinite loop.
+The React useCallback Hook returns a memoized callback function which allows us to isolate resource intensive functions so that they will not automatically run on every render.
+
+
+`useHttp` returns a function `sendRequest`, that sends the request and  `httpState`, which is an object containing the response `status`, `data` and `error`
 
 ```
 function useHttp(requestFunction: any, startWithPending = false) {
@@ -234,8 +253,6 @@ function useHttp(requestFunction: any, startWithPending = false) {
     [requestFunction],
   )
 
-  //  This hook returns a function ('sendRequest'), to actually send given request.
-  //  This hook also features (...httpState,), which is an object with the current `status` of the request: success, fail or pending.  This object also contains the response data and possibly error data.
   return {
     sendRequest,
     ...httpState,
@@ -243,5 +260,40 @@ function useHttp(requestFunction: any, startWithPending = false) {
 }
 
 export default useHttp
+```
+
+<br/>
+
+#### api.tsx
+`api.js` contains functions that will send requests to Firebase in conjunction with the custom `useHttp` hook.
+Those are different functions for sending different kinds of requests. They also feature simple error handling.
+
+For example the `getAllQuotes` function gets all quotes from Firebase and transforms them into an Array of objects that have the necessary structure and format .
+
+```
+
+const FIREBASE_DOMAIN = '#'
+
+export async function getAllQuotes(): Promise<Quote[]> {
+  const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`)
+  const data = await response.json()
+
+  if (!response.ok) {
+    throw new Error(data.message || 'Could not fetch quotes.')
+  }
+
+  const transformedQuotes = []
+
+  for (const key in data) {
+    const quoteObj = {
+      id: key,
+      ...data[key],
+    }
+
+    transformedQuotes.push(quoteObj)
+  }
+
+  return transformedQuotes
+}
 
 ```

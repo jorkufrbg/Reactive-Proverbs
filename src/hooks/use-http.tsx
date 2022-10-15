@@ -63,8 +63,6 @@ function useHttp(requestFunction: any, startWithPending = false) {
     [requestFunction],
   )
 
-  //  This hook returns a function ('sendRequest'), to actually send given request.
-  //  This hook also features (...httpState,), which is an object with the current `status` of the request: success, fail or pending.  This object also contains the response data and possibly error data.
   return {
     sendRequest,
     ...httpState,

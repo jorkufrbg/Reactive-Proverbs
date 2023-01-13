@@ -4,7 +4,7 @@ interface Quote {
   author: string
 }
 
-const FIREBASE_DOMAIN = process.env.REACT_APP_FIREBASE_DOMAIN_API_KEY;
+const FIREBASE_DOMAIN = process.env.REACT_APP_FIREBASE_DOMAIN_API_KEY
 
 export async function getAllQuotes(): Promise<Quote[]> {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`)

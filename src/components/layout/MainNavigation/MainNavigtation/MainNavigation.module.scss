@@ -26,6 +26,7 @@
 
 .menuNav.showMenu {
   width: 100%;
+  right: 0;
   transition: all ease 0.3s;
 }
 
@@ -47,13 +48,21 @@
 
 //Max Width Queries
 @media only screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    z-index: 100;
+  }
+
   .menuNav {
     overflow-y: scroll;
     list-style: none;
-    position: fixed;
+    // position: fixed;
+    position: absolute;
+    min-width: 320px;
+    right: -320px;
     top: 5rem;
     background: #212121;
-    right: 0;
+    // right: 0;
     bottom: 0;
     height: calc(100vh - 5rem);
     width: 0;

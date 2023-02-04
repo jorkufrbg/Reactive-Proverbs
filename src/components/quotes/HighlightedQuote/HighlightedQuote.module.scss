@@ -7,12 +7,10 @@
   padding: 2rem 1.5rem 1rem 1.5rem;
   margin: 3rem auto;
   width: 90%;
-  //max-width: 40rem;
   max-width: 45rem;
 }
 
 .quote p {
-  //font-size: 2rem;
   margin: 0rem 0 1.5rem 0;
   font-size: 1.4rem;
 }
@@ -23,7 +21,6 @@
   text-align: right;
   color: #a1e0e0;
 }
-
 
 @media only screen and (max-width: 768px) {
   .quote p {
@@ -38,7 +35,7 @@
   }
 
   .quote p {
-    font-size: 1.2rem
+    font-size: 1.2rem;
   }
 
   .quote figcaption {

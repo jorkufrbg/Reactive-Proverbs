@@ -56,7 +56,6 @@ describe('QuoteItem', () => {
     userEvent.click(buttonElement)
 
     // Assert
-
     const outputElement = screen.getByText('View Fullscreen')
 
     expect(outputElement).toHaveAttribute('href', '/quotes/q1')

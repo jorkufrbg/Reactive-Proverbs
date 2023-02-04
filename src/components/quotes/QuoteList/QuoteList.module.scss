@@ -29,15 +29,9 @@
   background-color: #c2fafa;
 }
 
-
 //Landscape Queires
 @media only screen and (max-width: 1280px) {
   .list {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-//Portrait Queries
-//@media only screen and (max-width: 1367px) and (orientation: portrait) {
-//
-//}

@@ -1,7 +1,5 @@
 .main {
-  margin: 2rem auto;
-  //width: 90%;
-  //max-width: 75rem;
+  margin: 2.5rem auto;
   width: 100%;
   max-width: 75%;
 }
@@ -12,22 +10,16 @@
   font-size: 2rem;
 }
 
-
 @media only screen and (max-width: 450px) {
-
-  .main {
-    margin: 2rem auto;
-  }
-
   .main h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin: 2rem auto 2rem auto;
   }
 }
 
 //Portrait Queries
 @media only screen and (max-width: 1025px) and (orientation: portrait) {
   .main {
-    max-width: 90%
+    max-width: 90%;
   }
 }
-

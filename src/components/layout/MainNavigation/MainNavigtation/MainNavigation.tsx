@@ -18,7 +18,7 @@ const MainNavigation = (props: any) => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
-        <Link to='/'>
+        <Link onClick={closeMenu} to='/'>
           <HeaderLogo />
         </Link>
       </div>
@@ -49,8 +49,6 @@ const MainNavigation = (props: any) => {
       </nav>
 
       <BurgerIcon onToggle={handleToggle} navbarOpen={navbarOpen} />
-
-      {/* <button onClick={handleToggle}>{navbarOpen ? 'Close' : 'Open'}</button> */}
     </header>
   )
 }

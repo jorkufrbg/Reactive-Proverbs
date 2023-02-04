@@ -1,15 +1,12 @@
 .item {
-  //margin: 1rem 0;
   margin: 0;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   background-color: #212121;
-  //min-height: 115px;
-  //min-height: 120px;
   position: relative;
 }
 
@@ -27,15 +24,12 @@
 .item blockquote {
   margin: 0;
   text-align: left;
-  /*font-size: 1.1rem;*/
   font-size: 1rem;
-  line-height: 1.3;
   color: #b0bec5;
 }
 
 .item p {
-  margin: 0 0 0.5rem 0;
-
+  margin: 0;
 }
 
 .item figcaption {
@@ -43,7 +37,7 @@
   color: #566d6d;
   font-size: 0.9rem;
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.1rem;
 }
 
 .btn svg {
@@ -60,7 +54,6 @@
       position: relative;
       bottom: unset;
     }
-
   }
 
   .item figure {
@@ -75,8 +68,3 @@
     margin-bottom: 0.5rem;
   }
 }
-
-//Portrait Queries
-//@media only screen and (max-width: 1025px) and (orientation: portrait) {
-//}
-

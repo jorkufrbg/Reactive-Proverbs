@@ -1,7 +1,7 @@
-import { Fragment, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import QuoteForm from '../components/quotes/QuoteForm'
+import QuoteForm from '../components/quotes/QuoteForm/QuoteForm'
 import useHttp from '../hooks/use-http'
 import { addQuote } from '../lib/api'
 
@@ -20,10 +20,10 @@ const NewQuote = () => {
   }
 
   return (
-    <Fragment>
+    <div id='new-quote'>
       <h2 className='center'>Share some wisdom!</h2>
       <QuoteForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />
-    </Fragment>
+    </div>
   )
 }
 

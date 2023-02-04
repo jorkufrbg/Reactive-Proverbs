@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react'
 import { Routes, Route, Navigate, Link } from 'react-router-dom'
 
-import LoadingSpinner from './components/UI/LoadingSpinner'
-import Layout from './components/layout/Layout'
+import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner'
+import Layout from './components/layout/Layout/Layout'
 
 const AllQuotes = React.lazy(async () => await import('./pages/AllQuotes'))
 const QuoteDetail = React.lazy(async () => await import('./pages/QuoteDetail'))
 const NewQuote = React.lazy(async () => await import('./pages/NewQuote'))
 const NotFound = React.lazy(async () => await import('./pages/NotFound'))
-const Comments = React.lazy(async () => await import('./components/comments/Comments'))
+const Comments = React.lazy(async () => await import('./components/comments/Comments/Comments'))
 
 function App() {
   return (

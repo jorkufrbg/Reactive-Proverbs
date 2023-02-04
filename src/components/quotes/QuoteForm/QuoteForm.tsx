@@ -1,9 +1,9 @@
 import React, { Fragment, useRef, useState } from 'react'
 // import { Prompt } from "react-router-dom";
 
-import Card from '../UI/Card'
-import LoadingSpinner from '../UI/LoadingSpinner'
-import classes from './QuoteForm.module.css'
+import Card from '../../UI/Card/Card'
+import LoadingSpinner from '../../UI/LoadingSpinner/LoadingSpinner'
+import classes from './QuoteForm.module.scss'
 
 interface QuoteFormProps {
   isLoading?: JSX.Element | boolean

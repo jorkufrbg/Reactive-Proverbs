@@ -1,0 +1,25 @@
+.header-logo {
+  display: block;
+
+  * {
+    transition: all ease 0.5s;
+  }
+
+  &:hover {
+    ellipse {
+      stroke: #ffffff;
+    }
+
+    path {
+      fill: #ffffff
+    }
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
+  .header-logo {
+    height: 50px;
+  }
+}
+

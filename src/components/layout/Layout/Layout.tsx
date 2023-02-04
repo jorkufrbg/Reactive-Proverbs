@@ -1,7 +1,6 @@
 import { Fragment } from 'react'
-
-import classes from './Layout.module.css'
-import MainNavigation from './MainNavigation/MainNavigation'
+import classes from './Layout.module.scss'
+import MainNavigation from '../MainNavigation/MainNavigtation/MainNavigation'
 
 interface LayoutProps {
   children?: React.ReactNode

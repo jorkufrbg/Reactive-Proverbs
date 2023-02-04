@@ -1,12 +1,10 @@
 import { NavLink } from 'react-router-dom'
-import HeaderLogo from './HeaderLogo'
-
-import classes from './MainNavigation.module.css'
+import HeaderLogo from '../HeaderLogo/HeaderLogo'
+import classes from './MainNavigation.module.scss'
 
 const MainNavigation = () => {
   return (
     <header className={classes.header}>
-      {/* <div className={classes.logo}>Reactive Quotes</div> */}
       <div className={classes.logo}>
         <HeaderLogo />
       </div>

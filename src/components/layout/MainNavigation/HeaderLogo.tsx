@@ -1,5 +1,0 @@
-const HeaderLogo = () => {
-  return <svg xmlns="http://www.w3.org/2000/svg" width="68.5595" height="61" viewBox="0 0 68.5595 61"><ellipse cx="34.2798" cy="30.4938" rx="33.7798" ry="12.9369" fill="none" stroke="#009688"/><ellipse cx="34.5021" cy="30.4663" rx="12.9366" ry="33.779" transform="translate(-10.8315 21.3333) rotate(-30.0007)" fill="none" stroke="#009688" strokeMiterlimit="3.9998" strokeWidth="1"/><ellipse cx="34.3808" cy="30.5337" rx="33.779" ry="12.9366" transform="translate(-9.4734 45.041) rotate(-59.9993)" fill="none" stroke="#009688" strokeMiterlimit="3.9998" strokeWidth="1"/><path d="M39.0523,25.5826a6.6549,6.6549,0,0,0-10.661,7.307v.9582l-.9583,2.3958c0,.3593,0,.9583.5989.9583h.3594l2.3957-.9583h.9583a9.5666,9.5666,0,0,0,3.1145.5989A6.3364,6.3364,0,0,0,39.0523,25.5826Zm-.8385,7.307H31.5057a.3594.3594,0,0,1,0-.7188h6.7081V32.89Zm0-2.1562H31.5057a.3594.3594,0,0,1,0-.7187h6.7081v.7187Zm0-2.3957H31.5057a.3594.3594,0,0,1,0-.7187h6.7081v.7187Z" transform="translate(-0.2206 0)" fill="#009688"/></svg>
-}
-
-export default HeaderLogo

@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 
-import QuoteItem from './QuoteItem'
-import classes from './QuoteList.module.css'
+import QuoteItem from '../QuoteItem/QuoteItem'
+import classes from './QuoteList.module.scss'
 
 const sortQuotes = (quotes: any[], ascending: boolean) => {
   return quotes.sort((quoteA: { id: number }, quoteB: { id: number }) => {

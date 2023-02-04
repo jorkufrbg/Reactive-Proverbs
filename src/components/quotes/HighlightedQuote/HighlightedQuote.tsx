@@ -1,4 +1,4 @@
-import classes from './HighlightedQuote.module.css'
+import classes from './HighlightedQuote.module.scss'
 
 interface HighlightedQuoteProps {
   author: string

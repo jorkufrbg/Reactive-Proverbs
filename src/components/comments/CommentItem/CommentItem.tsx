@@ -1,4 +1,4 @@
-import classes from './CommentItem.module.css'
+import classes from './CommentItem.module.scss'
 
 interface CommentItemProps {
   text: string

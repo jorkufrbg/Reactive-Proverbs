@@ -20,7 +20,7 @@ const NewQuote = () => {
   }
 
   return (
-    <div id='new-quote'>
+    <div className='new-quote'>
       <h2 className='center'>Share some wisdom!</h2>
       <QuoteForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />
     </div>

@@ -4,8 +4,8 @@
   padding: 0;
 
   display: grid;
-  grid-template-columns: repeat(2,1fr);
- grid-gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
 }
 
 .sorting {
@@ -28,3 +28,16 @@
 .sorting button:hover {
   background-color: #c2fafa;
 }
+
+
+//Landscape Queires
+@media only screen and (max-width: 1280px) {
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+//Portrait Queries
+//@media only screen and (max-width: 1367px) and (orientation: portrait) {
+//
+//}

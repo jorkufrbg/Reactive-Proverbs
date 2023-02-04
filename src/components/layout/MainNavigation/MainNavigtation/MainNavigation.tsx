@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import HeaderLogo from '../HeaderLogo/HeaderLogo'
 import classes from './MainNavigation.module.scss'
 
@@ -6,7 +6,9 @@ const MainNavigation = () => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
-        <HeaderLogo />
+        <Link to='/'>
+          <HeaderLogo />
+        </Link>
       </div>
       <nav className={classes.nav}>
         <ul>

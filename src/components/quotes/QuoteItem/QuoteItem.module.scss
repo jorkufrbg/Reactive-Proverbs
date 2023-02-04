@@ -45,11 +45,22 @@
   position: absolute;
   bottom: 1rem;
 }
-.btn svg {width: 23px;height: auto;}
+
+.btn svg {
+  width: 23px;
+  height: auto;
+}
 
 @media only screen and (max-width: 450px) {
   .item {
     flex-direction: column;
+    padding-bottom: 1.5rem;
+
+    figcaption {
+      position: relative;
+      bottom: unset;
+    }
+
   }
 
   .item figure {
@@ -64,3 +75,8 @@
     margin-bottom: 0.5rem;
   }
 }
+
+//Portrait Queries
+//@media only screen and (max-width: 1025px) and (orientation: portrait) {
+//}
+

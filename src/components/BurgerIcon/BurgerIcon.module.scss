@@ -1,15 +1,16 @@
 .hamburger {
   position: absolute;
-  right: 40px;
+  right: 5%;
   // top: 40px;
   z-index: 10;
   cursor: pointer;
+  padding: 0;
   display: none;
 
   .line {
     width: 30px;
     height: 3px;
-    background-color: #ecf0f1;
+    background-color: teal;
     display: block;
     margin: 6px auto;
     transition: all 0.3s ease;
@@ -17,7 +18,7 @@
 
   &.is-active {
     .line {
-      background-color: teal;
+      background-color: #ffffff;
       &:nth-child(2) {
         opacity: 0;
       }
@@ -31,7 +32,7 @@
   }
 
   &:hover .line {
-    background-color: teal;
+    background-color: #ffffff;
   }
 }
 

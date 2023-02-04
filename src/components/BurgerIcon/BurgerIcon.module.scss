@@ -1,0 +1,42 @@
+.hamburger {
+  position: absolute;
+  right: 40px;
+  // top: 40px;
+  z-index: 10;
+  cursor: pointer;
+  display: none;
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 6px auto;
+    transition: all 0.3s ease;
+  }
+
+  &.is-active {
+    .line {
+      background-color: teal;
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+
+  &:hover .line {
+    background-color: teal;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
